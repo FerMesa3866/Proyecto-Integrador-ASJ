@@ -1,0 +1,34 @@
+<h2>¿Tenes sugerencias para mejorar esta página? <br> Dejamelas en este formulario</h2>
+
+<form class="formulario fuente-app" #contactForm="ngForm" (ngSubmit)="sendEmail($event)">
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input #nameInput = "ngModel" type="text" class="form-control" id="name" name="name" [(ngModel)]="name" required>
+    <div *ngIf="nameInput.errors && (contactForm.controls['name'].dirty || contactForm.controls['name'].touched)" class="alert alert-danger">
+      <div *ngIf="contactForm.controls['name'].errors">El nombre es Requerido</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input #mailInput = "ngModel" type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required email>
+    <div *ngIf="mailInput.invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)" class="alert alert-danger">
+      <div *ngIf="contactForm.controls['email'].errors">El email es requerido</div>
+      <div *ngIf="contactForm.controls['email'].errors">Email invalido</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Mensaje</label>
+    <textarea #messInput = "ngModel" class="form-control" id="message" name="message" [(ngModel)]="message" required></textarea>
+    <div *ngIf="messInput.invalid && (contactForm.controls['message'].dirty || contactForm.controls['message'].touched)" class="alert alert-danger">
+      <div *ngIf="contactForm.invalid">Por favor, completa con un mensaje</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+
+</form>
+

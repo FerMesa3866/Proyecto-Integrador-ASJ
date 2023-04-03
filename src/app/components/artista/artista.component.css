@@ -1,0 +1,70 @@
+
+    /* Estilos de portada */
+
+.portada{
+  margin-top: 100px;
+}
+
+.imagen-artista{
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+}
+
+h3{
+  margin-left: 200px;
+  margin-bottom: 100px;
+  color: white;
+  font-size: 70px;
+}
+
+a{
+  text-decoration: none;
+  margin-left: 200px;
+  font-size: 20px;
+  color: black;
+}
+
+.boton-volver{
+  margin-top: 50px;
+}
+
+.btn{
+  border-color: white;
+  color: whitesmoke;
+}
+
+.btn:hover{
+  background-color: rgba(196, 191, 191, 0.559);
+  transition: all 0.7s ease;
+  color: black;
+  border-radius: 10px;
+}
+
+    /* Estilos de info brindada */
+
+.info{
+  margin-top: 50px;
+}
+
+thead tr th{
+  color: white;
+  font-size: 20px;
+}
+
+tbody tr td{
+  color: white;
+}
+
+.imagen-track{
+  width: 70px;
+  height: 70px;
+}
+
+.nombre-album{
+  font-size: 20px;
+}
+
+.nombre-cancion{
+  font-size: 20px;
+}

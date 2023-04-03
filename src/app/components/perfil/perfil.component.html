@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+
+<div class="fuente-app">
+
+  <h1>Mi perfil</h1>
+
+  <div *ngIf="!bandera">
+
+    <h2>Detalles del usuario</h2>
+    <div *ngIf="datosUsuario">
+      <p>Nombre: {{ datosUsuario.nombre_usuario }}</p>
+      <p>Email: {{ datosUsuario.email }}</p>
+      <p>Password: {{ datosUsuario.contrasenia }}</p>
+    </div>
+
+  </div>
+
+  <form [formGroup]="formularioActualizar" *ngIf="bandera" (ngSubmit)="actualizarUsuario(formularioActualizar.value)">
+
+    <label class="form-label">Ingrese su nombre de usuario</label>
+    <input type="text" class="input form-control"  formControlName="nombreUsuario" value="{{ datosUsuario.nombre_usuario }}">
+
+    <label class="form-label">Ingrese su correo</label>
+    <input type="email" class="input form-control"  formControlName="email" value="{{ datosUsuario.email }}">
+
+    <label class="form-label">Ingrese su contraseña</label>
+    <input type="password" class="input form-control"  formControlName="password" value="{{ datosUsuario.contrasenia }}">
+
+    <button type="submit" class="btn btn-success"  >Actualizar</button>
+
+  </form>
+
+
+  <button type="button" class="btn btn-success" (click)="bandera = !bandera">Actualizar datos</button>
+
+  <div class="botones">
+    <button type="button" class="btn btn-danger" (click)="eliminarCuenta()" *ngIf="!eliminar">Eliminar ususario</button>
+
+    <button type="button" class="btn btn-danger" *ngIf="eliminar" (click)="eliminarUsuario()">Confirmar</button>
+
+    <button type="button" class="btn btn-success" *ngIf="eliminar" (click)="eliminarCancelado()">Cancelar</button>
+
+    <p *ngIf="eliminar" class="eliminar-cuenta">¿Estas seguro que queres eliminar tu cuenta?</p>
+
+  </div>
+
+
+</div>
+
+
+
+

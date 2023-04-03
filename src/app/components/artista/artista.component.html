@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<div class="portada row fuente-app">
+
+  <div class="col-2">
+    <img class="imagen-artista" [src]="artista.images | noimage">
+  </div>
+
+  <div class="col">
+    <h3>{{ artista.name }}</h3>
+    <p>
+      <a [href]="artista.external_urls.spotify" target="_blank">
+        Ir a la pagina de {{ artista.name }} en Spotify
+      </a>
+    </p>
+  </div>
+
+  <div class="boton-volver col-4 text-right">
+
+    <button routerLink="/search" class="btn btn-outline">
+      Volver a Search
+    </button>
+
+  </div>
+
+</div>
+
+<div class="info row fuente-app">
+
+  <div class="col">
+
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Album</th>
+          <th>Cancion</th>
+          <th>Vista previa</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let track of topTracks">
+          <td>
+            <img class="imagen-track" [src]="track.album.images | noimage">
+          </td>
+          <td class="nombre-album">{{ track.album.name }}</td>
+          <td class="nombre-cancion">{{ track.name }}</td>
+          <td>
+            <audio [src]="track.preview_url" controls></audio>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+
+.contenedor-busqueda{
+  display: flex;
+}
+
+
+    /* Estilos barra de busqueda */
+
+.busqueda{
+  text-align: left;
+  margin-left: -100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+input{
+  height: 60px;
+  width: 500px;
+  padding: 0 30px;
+  color: black;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid black;
+  border: none;
+}
+
+::placeholder {
+  color: black;
+}
+
+    /* Estilos boton volver */
+
+.btn{
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 200px;
+  border-color: white;
+  color: whitesmoke;
+}
+
+.btn:hover{
+  background-color: rgba(196, 191, 191, 0.559);
+  transition: all 0.7s ease;
+  color: black;
+  border-radius: 10px;
+}
+
+

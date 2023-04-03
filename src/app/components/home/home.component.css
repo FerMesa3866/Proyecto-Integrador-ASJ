@@ -1,0 +1,26 @@
+.titulos{
+  font-size: 40px;
+  color: antiquewhite;
+  text-align: right;
+  margin-right: -100px;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+.card-colums{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  margin-top: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.card-img-top{
+  width: 350px;
+  height: 350px;
+}
+
+

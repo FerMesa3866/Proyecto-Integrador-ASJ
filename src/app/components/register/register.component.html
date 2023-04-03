@@ -1,0 +1,35 @@
+<form [formGroup]="createForm" class="fuente-app" (ngSubmit)="onCreate(createForm.value)">
+
+  <h1>Registrarse</h1>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Ingrese su nombre de usuario</label>
+    <input type="email" class="input form-control" placeholder="Nombre de usuario" formControlName="nombreUsuario">
+
+  </div>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Ingrese su correo</label>
+    <input type="email" class="input form-control" placeholder="Email" formControlName="email">
+
+  </div>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Ingrese su contraseña</label>
+    <input type="password" class="input form-control" placeholder="Contraseña" formControlName="password">
+
+  </div>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Repita su contraseña</label>
+    <input type="password" class="input form-control" placeholder="Contraseña" formControlName="password">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Registrarse</button>
+
+</form>

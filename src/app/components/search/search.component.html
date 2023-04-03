@@ -1,0 +1,20 @@
+
+<app-navbar></app-navbar>
+
+<div class="contenedor-busqueda">
+
+  <div class="busqueda fuente-app">
+    <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista o cancion">
+  </div>
+
+  <button routerLink="/home" class="btn btn-outline-danger fuente-app">
+    Volver a Home
+  </button>
+
+</div>
+
+
+
+
+
+<app-tarjetasgeneral [items]="artistas"></app-tarjetasgeneral>

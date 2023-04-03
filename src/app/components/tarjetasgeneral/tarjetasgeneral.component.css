@@ -1,0 +1,24 @@
+.col{
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin: 20px;
+  height: 450px;
+}
+
+.card-img-top{
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-body{
+  font-size: 25px;
+  color: antiquewhite;
+  margin-left: 25px;
+}
+
+
+span{
+  border-radius: 20px;
+}

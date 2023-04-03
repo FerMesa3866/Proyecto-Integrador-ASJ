@@ -1,0 +1,33 @@
+<h1 class="titulo"> Tu lugar es acá <br> Descubrí toda la musica que te gusta! </h1>
+
+<form [formGroup]="logForm" class="fuente-app" (ngSubmit)="onLogin(logForm.value)">
+
+  <h1>Innicio de sesion</h1>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Ingrese usuario</label>
+    <input type="text" class="input form-control" placeholder="Nombre de usuario" formControlName="nombreUsuario">
+    <div *ngIf="logForm.get('nombreUsuario')">
+      Este campo es requerido
+    </div>
+
+  </div>
+
+  <div class="contenedor-inputs form-group col-mb-3">
+
+    <label class="form-label">Ingrese su contraseña</label>
+    <input type="password" class="input form-control" placeholder="Contraseña" formControlName="password">
+    <div *ngIf="logForm.get('password')">
+      Este campo es requerido
+    </div>
+
+  </div>
+
+  <div class="redireccion">
+    <a routerLink="/register">¿No estas registrado?. Registrate acá</a>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+
+</form>

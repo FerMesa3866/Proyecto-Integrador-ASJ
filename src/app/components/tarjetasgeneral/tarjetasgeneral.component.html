@@ -1,0 +1,21 @@
+<div class="row">
+
+  <div (click)="verArtista( item )" *ngFor="let item of items" class="col puntero fuente-app">
+    <img [src]="item.images | noimage" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text"><span *ngFor="let artista of item.artists" class="badge text-bg-info">{{ artista.name }}</span></p>
+      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+  </div>
+
+  <div (click)="verCancion( item )" *ngFor="let item of items" class="col puntero fuente-app">
+    <img [src]="item.images | noimage" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text"><span *ngFor="let cancion of item.tracks" class="badge text-bg-info">{{ cancion.name }}</span></p>
+      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+    </div>
+  </div>
+
+</div>
